@@ -1,0 +1,39 @@
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# IDE and local editor files
+.idea
+.vscode
+.editorconfig
+
+# Local environment configuration
+.env
+.env.backup
+
+# Testing files
+tests
+phpunit.xml
+.phpunit.cache
+
+# Dependencies (compiled inside container)
+vendor
+node_modules
+
+# Local Vite compiled assets (compiled clean inside container)
+public/build
+public/hot
+
+# Temporary framework and server caches
+bootstrap/cache/*
+storage/logs/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/framework/cache/*
+storage/app/public/*
+
+# Log files and compiler relics
+npm-debug.log
+yarn-error.log
+composer.phar
