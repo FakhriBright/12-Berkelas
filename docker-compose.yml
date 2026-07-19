@@ -16,10 +16,11 @@ services:
     networks:
       - network
     healthcheck:
-      test: ["CMD","mysqladmin","ping","-h","localhost","-u$$MYSQL_USER","-p$$MYSQL_PASSWORD"]
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u$$MYSQL_USER -p$$MYSQL_PASSWORD --silent"]
       interval: 10s
       timeout: 5s
-      retries: 5
+      retries: 20
+      start_period: 60s
 
   web:
     build: .
